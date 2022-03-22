@@ -17,15 +17,15 @@ public class MyList<T> {
     }
 
     public void print(){
-        for(int i = 0; i < myList.length; i++){
-            if(myList[i]!=null)
-                System.out.println(myList[i]);
+        for (T t : myList) {
+            if (t != null)
+                System.out.println(t);
         }
     }
 
     public boolean lookup(T element){
-        for(int i = 0; i < myList.length; i++){
-            if(myList[i] == element)
+        for (T t : myList) {
+            if (t == element)
                 return true;
         }
         return false;
